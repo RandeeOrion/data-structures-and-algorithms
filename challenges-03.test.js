@@ -46,9 +46,13 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetizeBetter = (arr) => {
-  console.log('before ' + arr)
-  arr.sort( ( a, b ) => { 
-    return b.toLowerCase() - a.toLowerCase(); 
+  arr.sort(function(a, b) {
+    let upperA = a.toUpperCase();
+    let upperB = b.toUpperCase();
+
+    if (upperA < upperB) {return -1;}
+    if (upperB < upperA) {return 1;}
+    return 0
   });
   return arr;
 };
