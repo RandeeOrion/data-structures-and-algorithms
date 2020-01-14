@@ -26,6 +26,7 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
+  //worked as a group to solve this question
   return str.match(/[A-Z]\w+/gm) || [];
 };
 
