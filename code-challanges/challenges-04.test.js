@@ -13,8 +13,8 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const isNum = (input) => {
-  const num = /[0-9]/g;
-  num.test(input);
+  let num = /[0-9]/g;
+  return num.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -26,7 +26,7 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  const capital = /^[A-Z]/g;
+  let capital = /^[A-Z]/g;
   capital.test(str);
 };
 
