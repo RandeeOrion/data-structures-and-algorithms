@@ -79,7 +79,10 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-  result.push(gruffaloCrumble.slice(2, 6));
+  ing = gruffaloCrumble.ingredients;
+  //split the array
+  //iterate over the array
+
   return result;
 };
 
