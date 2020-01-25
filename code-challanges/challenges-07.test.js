@@ -13,7 +13,7 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 const forLoopTwoToThe = (arr) => {
   let newArr = [];
   for (let i=0; i<arr.length; i++){
-    newArr.push(Math.pow(2,[i]));
+    newArr.push(Math.pow(2, arr[i]));
   }
   return newArr;
 };
@@ -124,7 +124,9 @@ const snorlaxAbilities = {
 };
 
 const extractAbilities = (arr) => {
-  // Solution code here...
+  arr.map((val,idx) => {
+    return Object.values(val.ability.name);
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
