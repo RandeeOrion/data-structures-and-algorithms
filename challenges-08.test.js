@@ -9,13 +9,7 @@ For example, oddValues([1,2,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
 const oddValues = (arr) => {
-  let newArr = [];
-  arr.map( (num)=> {
-    if (num % 2 !== 0){
-      newArr.push(num);
-    }
-  })
-  return newArr;
+  return arr.filter(num => num % 2 !== 0 );
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -44,7 +38,7 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
 const notInFirstArray = (forbiddenValues, arr) => {
-  // Solution code here...
+  return arr.filter(elm => !forbiddenValues.includes(elm));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -99,7 +93,9 @@ For example, getStatName(snorlaxData.stats, 50) will return ['special-defense', 
 ------------------------------------------------------------------------------------------------ */
 
 const getStatName = (arr, minBaseStat) => {
-  // Solution code here...
+  return arr.filter(obj => obj.baseStat > minBaseStat).map(elm => {
+    return elm.stat.
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -152,8 +148,10 @@ const characters = [
 ];
 
 const getCharactersWithoutChildren = (arr) => {
-  // Solution code here...
+  return arr.filter(obj => !obj.children);
 };
+
+//should pass something is going on with my tests
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
