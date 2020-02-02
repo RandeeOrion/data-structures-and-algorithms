@@ -78,7 +78,7 @@ const noPunctuation = str => {
   let regex = (/\w+\s+/gm);
   return str.match(regex);
 };
-//why isn't this passing?!?!
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
@@ -92,7 +92,7 @@ For example, 'Welcome to Code 301!' will return 'W_lc_m_ t_ C_d_ 301!'.
 ------------------------------------------------------------------------------------------------ */
 
 let hangman = (str) => {
-  // Solution code here...
+  return str.replace(/[aeiou]/gim, '_');
 };
 
 /* ------------------------------------------------------------------------------------------------
