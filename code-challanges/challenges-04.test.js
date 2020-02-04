@@ -37,9 +37,14 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
+  let reg = /\b(^[A-J]\w*)/;
   let newArr = [];
-  arr.forEach(str =>
-    const regex = )
+  arr.forEach( (str) => {
+    if (reg.test(str)){
+      newArr.push(str);
+    }
+  })
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -55,8 +60,8 @@ Do not use the vertical bar (pipe) in your pattern.
 ------------------------------------------------------------------------------------------------ */
 
 const matchMonth = (input) => {
-let regex = /^[oO]ct(ober)?$/gm
-return regex.test(input);
+  let regex = /^[oO]ct(ober)?$/gm
+  return regex.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -73,7 +78,7 @@ const noPunctuation = str => {
   let regex = (/\w+\s+/gm);
   return str.match(regex);
 };
-//why isn't this passing?!?!
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
@@ -87,7 +92,7 @@ For example, 'Welcome to Code 301!' will return 'W_lc_m_ t_ C_d_ 301!'.
 ------------------------------------------------------------------------------------------------ */
 
 let hangman = (str) => {
-  // Solution code here...
+  return str.replace(/[aeiou]/gim, '_');
 };
 
 /* ------------------------------------------------------------------------------------------------
