@@ -106,8 +106,14 @@ const people = [
   new Person('Stan', 'Seattle', 67),
 ];
 
+// not passing. I need the whole object pushed into the newArr
+
 const sortPeople = (arr) => {
-  arr.sort(arr.lastname);
+  let newArr = [];
+  arr.forEach ( (obj) => {
+    newArr.push(obj.lastName);
+  })
+  return (newArr.sort());
 };
 
 /* ------------------------------------------------------------------------------------------------
