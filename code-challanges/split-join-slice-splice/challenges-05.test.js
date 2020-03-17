@@ -76,6 +76,7 @@ const gruffaloCrumble = {
   ]
 };
 
+//Worked with Madison and Kai
 
 const listFoods = (recipe) => {
   let result = [];
@@ -93,6 +94,8 @@ Write a function named splitFoods that uses split to produce the same output as 
 
 You may also use other string or array methods.
 ------------------------------------------------------------------------------------------------ */
+
+//worked with madison and Kai
 
 const splitFoods = (recipe) => {
   let result = [];
@@ -112,6 +115,8 @@ Write a function named stepAction that takes in the recipe and extracts the acti
 
 Return a new array containing just the verbs. For example, ['Mix until evenly distributed'] returns ['Mix'].
 ------------------------------------------------------------------------------------------------ */
+
+//worked with madison and kai
 
 const stepActions = (recipe) => {
   let result = [];
@@ -133,6 +138,8 @@ For example:
   removeEvenValues(integers);
   console.log(integers) will print [1, 3, 5]
 ------------------------------------------------------------------------------------------------ */
+
+//still working with madison and kai
 
 const removeEvenValues = (arr) => {
   for (let i = 0; i < arr.length; i++)
