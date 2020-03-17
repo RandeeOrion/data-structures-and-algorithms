@@ -87,13 +87,15 @@ For example:
 hasChildrenValues(characters, 'Cersei') will return true
 hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
+//worked with Clayton
+
 
 const hasChildrenValues = (arr, character) => {
-  Object.values(arr).forEach( obj => {
-    if (obj.spouse = null){
-      character = false;
+  for (let i = 0; i < arr.length; i++){
+    if (arr[i].name === character) {
+      return (Object.values(arr[i])[2].length > 0)
     }
-  });
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -105,7 +107,19 @@ The input and output of this function are the same as the input and output from 
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenEntries = (arr, character) => {
-  // Solution code here...
+  let children = [];
+  arr.forEach( obj => {
+    let index;
+    if(character = obj.name) {
+      Object.keys(obj).forEach( (key, idx) => {
+        if (key === 'children') {
+          index = idx;
+        }
+      });
+      children = Object.values(obj)[index];
+    }
+  })
+  return children.length > 0;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -115,7 +129,8 @@ Write a function named totalCharacters that takes in an array and returns the nu
 ------------------------------------------------------------------------------------------------ */
 
 const totalCharacters = (arr) => {
-  // Solution code here...
+  let newArr = arr.join()
+  return newArr.length;
 };
 
 /* ------------------------------------------------------------------------------------------------
