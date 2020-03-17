@@ -19,5 +19,5 @@ I wrote a for loop so I could first isolate the last index of an array. Once I w
 [Stack Overflow link](https://stackoverflow.com/questions/25625991/how-to-add-an-element-to-an-array-without-any-built-in-functions)
 
 ## Solution
-![White Board](../images/whiteboardReverseArray.jpg)
+![White Board Image](assets/whiteboardReverseArray.jpg)
 
